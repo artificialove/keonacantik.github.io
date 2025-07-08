@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>beautiful keona</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: pink;
+      color: white;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+    }
+    .container {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+    .hidden {
+      display: none;
+    }
+    .text-box {
+      max-width: 600px;
+      font-size: 1.2em;
+      line-height: 1.6em;
+      cursor: pointer;
+    }
+    .stars, .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      background-image: url('https://raw.githubusercontent.com/melanieseltzer/sparkle-background/main/sparkles-white.png'),
+                        url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Heart_coraz%C3%B3n.svg/2048px-Heart_coraz%C3%B3n.svg.png');
+      background-size: 200px, 100px;
+      background-repeat: repeat;
+      opacity: 0.3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" onclick="nextPage()">
+    <div class="stars"></div>
+    <div id="page1" class="text-box">
+      u’re not just pretty, u’re poetry in motion<br>
+      every smile, every glance, every word u say carries its own kind of magic<br>
+      u glow without even trying, and in every room u enter<br>
+      there’s a quiet awe that follows u<br>
+      because ur beauty isn’t just on the outside<br>
+      it lives in how kind ur voice sounds<br>
+      how warm ur energy feels<br>
+      and how effortlessly u make people feel seen
+    </div>
+    <div id="page2" class="text-box hidden">
+      u are so divine, so captivating<br>
+      as if grace decided to take human form and chose u<br>
+      u walk with elegance, speak with soul<br>
+      and shine in ur own light<br>
+      unbothered, unmatched, unforgettable
+    </div>
+    <div id="page3" class="text-box hidden">
+      some people are beautiful<br>
+      but u?<br>
+      u’re a feeling<br>
+      something people remember even after they walk away
+    </div>
+    <div id="page4" class="text-box hidden">
+      keep glowing, ka keona<br>
+      the world needs more of ur kind<br>
+      -with love jihan.
+    </div>
+  </div>
+  <script>
+    let currentPage = 1;
+    function nextPage() {
+      document.getElementById('page' + currentPage).classList.add('hidden');
+      currentPage++;
+      if (currentPage > 4) currentPage = 1;
+      document.getElementById('page' + currentPage).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
